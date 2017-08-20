@@ -14,7 +14,11 @@ app.listen(3000, function () {
 
 // Root web app endpoint
 app.get('/', function (req, res) {
-	res.render('home');
+	// res.send('Hello World!');
+	res.render('home', {
+		title: "Title from Server",
+		content: "This is a sentence sent from the server."
+	});
 });
 
 // Set up another endpoint at /ucla
