@@ -13,3 +13,8 @@ app.listen(3000, function () {
 app.get('/', function (req, res) {
 	res.send('Hello World!');
 });
+
+// Set up another endpoint at /ucla
+app.get('/ucla', function (req, res) {
+	res.send('UCLA is gr8!');
+});
