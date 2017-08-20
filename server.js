@@ -4,6 +4,9 @@ var express = require('express');
 // Instantiate the "app" to start creating server endpoints
 var app = express();
 
+// Set up where our application will look for client-side files (HTML, CSS, JS)
+app.set('view engine', 'hbs');
+
 // Server listens to port 3000
 app.listen(3000, function () {
 	console.log('Your app is listening on port 3000!');
@@ -11,7 +14,7 @@ app.listen(3000, function () {
 
 // Root web app endpoint
 app.get('/', function (req, res) {
-	res.send('Hello World!');
+	res.render('home');
 });
 
 // Set up another endpoint at /ucla
