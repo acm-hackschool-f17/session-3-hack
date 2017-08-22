@@ -29,6 +29,12 @@ app.get('/ucla', function (req, res) {
 	res.send('UCLA is gr8!');
 });
 
+app.get('/library', function (req, res) {
+	var initialBooks = initBooks();
+	res.render('library', {
+		books: initialBooks
+	});
+});
 
 //////////////////////////////////////////////////////
 // Helper Functions:                                //
