@@ -3,6 +3,7 @@ var express = require('express');
 
 // Instantiate the "app" to start creating server endpoints
 var app = express();
+var books = initBooks();
 
 // expose all files in public/ to be accessible from the root of our website
 app.use(express.static('public'));
@@ -30,10 +31,28 @@ app.get('/ucla', function (req, res) {
 });
 
 app.get('/library', function (req, res) {
-	var initialBooks = initBooks();
 	res.render('library', {
-		books: initialBooks
+		books: books
 	});
+});
+
+/**
+ * Delete a book by its ISBN. We defined a variable in our route, and express puts its
+ * into req.params.isbn, since we named the variable `isbn` in the route path.
+ * We loop through the list of books to find the index of the one with an ISBN of the
+ * give one, and once we do, we remove it (see Array.splice, MDN), and stop checking, 
+ * to immediately refresh the library.
+ */
+app.get('/books/delete/:isbn', (req, res) => {
+	var isbn = req.params.isbn || 0;
+	for (let i = 0; i < books.length; i++) {
+		if (books[i].isbn === isbn) {
+			books.splice(i, 1);
+			break;
+		}
+	}
+	
+	res.redirect('/library');
 });
 
 //////////////////////////////////////////////////////
