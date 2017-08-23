@@ -58,13 +58,8 @@
             <div class="item" onClick="setOverlayDisplay(true)"><div class="item-icon"><span class="glyphicon glyphicon-plus"></span></div><div class="item-text">Add Book</div></div>
         </div>
 
+        <!-- TODO involve something with POST -->
         <div id="content">
-            <!-- TODO for Hack Board: add sidebar item for setting profile? -->
-            <!-- TODO 1: add the welcome message here -->
-            <!-- <p id="welcome">Welcome, <b>{{user}}</b>!</p> -->
-
-            <!-- TODO 2: add the search form here -->
-
             <table id="books">
                 <thead>
                     <tr>
@@ -80,7 +75,7 @@
                         <td>{{this.isbn}}</td>
                         <td>{{this.copies}}</td>
                         <td><a href="/books/delete/{{this.isbn}}"><span class="glyphicon glyphicon-remove-circle"></span></td>
-                    </td>
+                    </tr>
                 {{/each}}
             </table>
         </div>
