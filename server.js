@@ -30,8 +30,8 @@ app.get('/', function (req, res) {
 });
 
 // Set up another endpoint at /ucla
-app.get('/ucla', function (req, res) {
-	res.send('UCLA is gr8!');
+app.get('/error', function (req, res) {
+	res.send('The book is invalid.');
 });
 
 app.get('/library', function (req, res) {
@@ -66,6 +66,7 @@ app.post('/books/add', function(req, res) {
 		res.redirect('/library');
 	} else {
 		console.log("You tried to add an invalid book into the elibrary.");
+		res.redirect('/error');
 	}
 });
 
