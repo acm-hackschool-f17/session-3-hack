@@ -11,10 +11,10 @@
             <div id="box">
                 <h2>Add a Book</h2>
                 <form id="addbook" method="POST" action="/books/add">
-                    <input type="text" name="title" placeholder="Title..." />
-                    <input type="text" name="author" placeholder="Author..." />
-                    <input type="text" name="isbn" placeholder="ISBN..." />
-                    <input type="text" name="copies" placeholder="Number of Copies..." />
+                    <input type="text" id="addbook_title" name="title" placeholder="Title..." />
+                    <input type="text" id="addbook_author" name="author" placeholder="Author..." />
+                    <input type="text" id="addbook_isbn" name="isbn" placeholder="ISBN..." />
+                    <input type="text" id="addbook_copies" name="copies" placeholder="Number of Copies..." />
 
                     <input type="submit" value="Add Book" />
                     <input type="button" value="Clear" onClick="clearForm()" />
@@ -29,11 +29,11 @@
         </div>
 
         <div id="sidebar">
-            <div class="item" onClick="setLocation('/')"><div class="item-icon"><span class="glyphicon glyphicon-book"></span></div><div class="item-text">Library</div></div>
+            <div class="item" onClick="setLocation('/')"><div class="item-icon"><span class="glyphicon glyphicon-home"></span></div><div class="item-text">Home</div></div>
+            <div class="item" onClick="setLocation('/library')"><div class="item-icon"><span class="glyphicon glyphicon-book"></span></div><div class="item-text">Library</div></div>
             <div class="item" onClick="setOverlayDisplay(true)"><div class="item-icon"><span class="glyphicon glyphicon-plus"></span></div><div class="item-text">Add Book</div></div>
         </div>
 
-        <!-- TODO involve something with POST -->
         <div id="content">
             <table id="books">
                 <thead>
@@ -65,15 +65,10 @@
                 document.getElementById('addbook_title').value = "";
                 document.getElementById('addbook_copies').value = "";
                 document.getElementById('addbook_isbn').value = "";
-                document.getElementById('message').innerHTML = "";
             }
 
             function setLocation(url) {
                 window.location = url;
-            }
-
-            window.onload = function() {
-                setOverlayDisplay({{addFormBox.show}});
             }
         </script>
     </body>
