@@ -10,40 +10,15 @@
         <div id="overlay">
             <div id="box">
                 <h2>Add a Book</h2>
-                <form id="addbook" name="addbook" method="POST" action="/books/add" autocomplete="nope">
-                    <input type="text" id="addbook_title" name="title" placeholder="Title..." 
-                        {{#if addFormBox.formInfo.title}} 
-                            value="{{addFormBox.formInfo.title}}" 
-                        {{/if}}
-                    />
-                    <!-- <br /><br /> -->
-                    <input type="text" id="addbook_author" name="author" placeholder="Author..." 
-                        {{#if addFormBox.formInfo.author}} 
-                            value="{{addFormBox.formInfo.author}}" 
-                        {{/if}} 
-                    />
-                    <input type="text" id="addbook_isbn" name="isbn" placeholder="ISBN..." 
-                        {{#if addFormBox.formInfo.isbn}} 
-                            value="{{addFormBox.formInfo.isbn}}" 
-                        {{/if}} 
-                    />
-                    <input type="text" id="addbook_copies" name="copies" placeholder="Number of Copies..." 
-                        {{#if addFormBox.formInfo.copies}} 
-                            value="{{addFormBox.formInfo.copies}}" 
-                        {{/if}} 
-                    />
+                <form id="addbook" method="POST" action="/books/add">
+                    <input type="text" name="title" placeholder="Title..." />
+                    <input type="text" name="author" placeholder="Author..." />
+                    <input type="text" name="isbn" placeholder="ISBN..." />
+                    <input type="text" name="copies" placeholder="Number of Copies..." />
 
                     <input type="submit" value="Add Book" />
                     <input type="button" value="Clear" onClick="clearForm()" />
                     <input type="button" value="Close" onClick="setOverlayDisplay(false)" />
-                    
-                    {{#if addFormBox.message}}
-                        {{#if addFormBox.messageSuccess}}
-                            <p id="message" class="success">{{addFormBox.messageText}}</p>
-                        {{else}}
-                            <p id="message" class="fail">{{addFormBox.messageText}}</p>
-                        {{/if}}
-                    {{/if}}
                 </form>
             </div>
         </div>
