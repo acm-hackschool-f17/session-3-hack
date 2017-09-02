@@ -10,7 +10,7 @@ var books = initBooks();
 app.use(express.static('public'));
 
 // POST form data is "url-encoded", so decode that into JSON for us
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set up where our application will look for client-side files (HTML, CSS, JS)
 app.set('view engine', 'hbs');
@@ -21,72 +21,64 @@ app.listen(3000, function () {
 });
 
 // Root web app endpoint
-app.get('/', function (req, res) {
-	// res.send('Hello World!');
-	res.render('home', {
+app.get('/', function (request, response) {
+	// response.send('Hello World!');
+	response.render('home', {
 		title: "Title from Server",
 		content: "This is a sentence sent from the server."
 	});
 });
 
 // Set up another endpoint at /ucla
-app.get('/error', function (req, res) {
-	res.send('The book is invalid.');
+app.get('/error', function (request, response) {
+	response.send('The book is invalid.');
 });
 
-app.get('/library', function (req, res) {
-	res.render('library', {
+app.get('/library', function (request, response) {
+	response.render('library', {
 		books: books
 	});
 });
 
 /**
  * Define the route to add a book to the library. We are posted the title, author, isbn,
- * and number of copies. The <a> || <b> syntax is for validity checking: it picks <a> if a
- * is "valid", aka defined and non-empty/non-null, otherwise it picks <b>.
- * 
- * If the inputs are valid, create a new book objects and push it into the array
- *  Redirect to the library (to re-render the page)
- * If the inputs are not valid, render the library template by passing in an object
- * with field "addFormBox" (which is another object) that details what to display on the page.
- *  show: true means show the add box. message: true means we have a message to send.
- *  messageText is the text of the message we want to display. messageSuccess: false means to
- *  display the message as a failure (unable to add the book). Finally, formInfo is another
- *  object that the library template can read to re-fill in the input that was send to the 
- *  server to show exactly what was invalid, and also so the user doesn't have to retype it.'
+ * and number of copies.
+ * If the inputs are valid, create a new book objects and push it into the array.
+ * Redirect to the library (to re-render the page)
+ * If the inputs are not valid, render the error page.
  */
-app.post('/books/add', function(req, res) {
-	let title = req.body.title || "";
-	let author = req.body.author || "";
-	let isbn = req.body.isbn || "";
-	let copies = parseInt(req.body.copies) || 0;
+app.post('/books/add', function(request, response) {
+	let title = request.body.title;
+	let author = request.body.author;
+	let isbn = request.body.isbn;
+	let copies = parseInt(request.body.copies);
 	
 	if (title.length > 0 && author.length > 0 && isbn.length > 0 && copies > 0) {
 		books.push({title, author, isbn, copies});
-		res.redirect('/library');
+		response.redirect('/library');
 	} else {
 		console.log("You tried to add an invalid book into the elibrary.");
-		res.redirect('/error');
+		response.redirect('/error');
 	}
 });
 
 /**
  * Delete a book by its ISBN. We defined a variable in our route, and express puts its
- * into req.params.isbn, since we named the variable `isbn` in the route path.
+ * into request.params.isbn, since we named the variable `isbn` in the route path.
  * We loop through the list of books to find the index of the one with an ISBN of the
  * give one, and once we do, we remove it (see Array.splice, MDN), and stop checking, 
  * to immediately refresh the library.
  */
-app.get('/books/delete/:isbn', function(req, res) {
-	var isbn = req.params.isbn || 0;
-	for (let i = 0; i < books.length; i++) {
+app.get('/books/delete/:isbn', function(request, response) {
+	var isbn = request.params.isbn;
+	for (var i = 0; i < books.length; i++) {
 		if (books[i].isbn === isbn) {
 			books.splice(i, 1);
 			break;
 		}
 	}
 
-	res.redirect('/library');
+	response.redirect('/library');
 });
 
 //////////////////////////////////////////////////////
