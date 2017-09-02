@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Hack School Library</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+    </head>
+    <body>
+        <div id="overlay">
+            <div id="box">
+                <h2>Add a Book</h2>
+                <form id="addbook" method="POST" action="/books/add">
+                    <input type="text" id="addbook_title" name="title" placeholder="Title..." />
+                    <input type="text" id="addbook_author" name="author" placeholder="Author..." />
+                    <input type="text" id="addbook_isbn" name="isbn" placeholder="ISBN..." />
+                    <input type="text" id="addbook_copies" name="copies" placeholder="Number of Copies..." />
+
+                    <input type="submit" value="Add Book" />
+                    <input type="button" value="Clear" onClick="clearForm()" />
+                    <input type="button" value="Close" onClick="setOverlayDisplay(false)" />
+                </form>
+            </div>
+        </div>
+
+        <div id="header">
+            <div id="left"><img src="/images/logo.png" /></div>
+            <div id="right"><h1>Hack School Library</h1></div>
+        </div>
+
+        <div id="sidebar">
+            <div class="item" onClick="setLocation('/')"><div class="item-icon"><span class="glyphicon glyphicon-home"></span></div><div class="item-text">Home</div></div>
+            <div class="item" onClick="setLocation('/library')"><div class="item-icon"><span class="glyphicon glyphicon-book"></span></div><div class="item-text">Library</div></div>
+            <div class="item" onClick="setOverlayDisplay(true)"><div class="item-icon"><span class="glyphicon glyphicon-plus"></span></div><div class="item-text">Add Book</div></div>
+        </div>
+
+        <div id="content">
+            <table id="books">
+                <thead>
+                    <tr>
+                        <td>Title<br /><span>Author</span></td>
+                        <td>ISBN</td>
+                        <td>Copies</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                {{#each books}}
+                    <tr>
+                        <td>{{this.title}}<br /><span>{{this.author}}</span></td>
+                        <td>{{this.isbn}}</td>
+                        <td>{{this.copies}}</td>
+                        <td><a href="/books/delete/{{this.isbn}}"><span class="glyphicon glyphicon-remove-circle"></span></td>
+                    </tr>
+                {{/each}}
+            </table>
+        </div>
+
+        <script type="text/javascript">
+            function setOverlayDisplay(show) {
+                document.getElementById('overlay').style.display = show ? "block" : "none";
+            }
+
+            function clearForm() {
+                document.getElementById('addbook_author').value = "";
+                document.getElementById('addbook_title').value = "";
+                document.getElementById('addbook_copies').value = "";
+                document.getElementById('addbook_isbn').value = "";
+            }
+
+            function setLocation(url) {
+                window.location = url;
+            }
+        </script>
+    </body>
+</html>

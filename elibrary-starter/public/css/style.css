@@ -1,0 +1,274 @@
+body {
+    background-color: #F0F0F0;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+    margin: 0;
+    left: 0;
+    color: #333333;
+}
+
+#overlay {
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+
+#overlay #box {
+    position: fixed;
+    z-index: 101;
+    height: 400px;
+    width: 600px;
+    left: 50%;
+    top: 50%;
+    margin-left: -300px;
+    margin-top: -200px;
+    background-color: #FAFAFA;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 0px 6px #333;
+}
+
+#overlay #box h2 {
+    text-align: center;
+}
+
+#overlay #box form {
+    position: relative;
+    width: 350px;
+    margin: auto;
+}
+
+#overlay #box form input[type=text] {
+    width: 100%;
+    height: 30px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 1.1em;
+    padding: 0px 5px;
+    margin-bottom: 20px;
+}
+
+#main-header{
+    height: 120px;
+    background-color: #0D47A1;
+    border-bottom: 1px solid #0D47A1;
+}
+
+#main-header h1 {
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+    line-height: 120px;
+}
+
+@media(max-width: 550px) {
+    #main-header h1 {
+        font-size: 2em;
+    }
+}
+
+h2#subtitle {
+    text-align: center;
+    font-size: 2.4em;
+    font-weight: 300;
+}
+
+form#login {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+form#login input[type=text] {
+    height: 40px;
+    max-width: 400px;
+    width: 100%;
+    padding: 5px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+    text-align: center;
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #E2E2E2;
+    border-bottom: 1px solid #DADADA;
+    z-index: 10;
+}
+
+#header #left {
+    background-color: #0D47A1;
+    border-bottom: 1px solid #0D47A1;
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+#header #left img {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: 10px 10px;
+}
+
+#header #right {
+    padding: 0px 20px;
+    height: 100%;
+    float: left;
+}
+
+#header h1 {
+    margin: 0;
+    line-height: 80px;
+}
+
+@media (max-width:600px) {
+    #header h1 {
+        font-size: 1.4em;
+    }
+}
+
+#sidebar {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    top: 0;
+    left: 0;
+    background-color: #1565C0;
+    z-index: 9;
+}
+
+#sidebar .item {
+    color: white;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #1976D2;
+}
+
+#sidebar .item .item-icon {
+    height: 60px;
+    width: 60px;
+    float: left;
+}
+
+#sidebar .item .item-icon span {
+    font-size: 1.6em;
+    line-height: 60px;
+    margin-left: 15px;
+}
+
+#sidebar .item .item-text {
+    font-weight: 500;
+    font-size: 1.1em;
+    float: left;
+}
+
+#sidebar .item:hover {
+    cursor: pointer;
+    background-color: #1E88E5;
+}
+
+#sidebar .item:first-child { margin-top: 80px; }
+
+#content {
+    min-height: 500px;
+    position: relative;
+    padding-top: 80px;
+    padding-left: 200px;
+    box-sizing: border-box;
+}
+
+#content #search input[type=text] {
+    height: 40px;
+    max-width: 800px;
+    width: 80%;
+    margin: 20px;
+    padding: 5px;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    border-radius: 4px;
+    border: 1px solid #DADADA;
+}
+
+p#message {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666666;
+}
+
+p#message.fail {
+    color: #C62828;
+}
+
+p#message.success {
+    color: #43A047;
+}
+
+p#welcome {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #666666;
+    margin: 0px 25px;
+    margin-top: 25px;
+}
+
+p#welcome b {
+    font-weight: 500;
+}
+
+table#books {
+    max-width: 800px;
+    width: 80%;
+    margin: 10px 25px;
+    border: 1px solid #CFCFCF;
+    box-shadow: 0px 0px 4px #CCCCCC;
+    background-color: #E2E2E2;
+    border-collapse: collapse;
+}
+
+table#books thead tr td {
+    font-weight: 500;
+    font-size: 1.1em;
+    vertical-align: top;  
+    background-color: #F8F8F8;
+    padding: 15px;
+    border-bottom: 3px solid #E2E2E2;
+}
+
+table#books tr td span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+table#books tr td {
+    /*font-weight: 500;*/
+    font-size: 1.0em;
+    vertical-align: top;  
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+table#books tr td span.glyphicon {
+    font-size: 1.4em;
+}
+
+table#books tr td span.glyphicon.glyphicon-remove-circle {
+    color: #F44336;
+}
+
+table#books tr td span.glyphicon.glyphicon-remove-circle:hover {
+    cursor: pointer;
+    color: #C62828;
+}
