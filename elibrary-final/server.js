@@ -22,7 +22,6 @@ app.listen(3000, function () {
 
 // Root web app endpoint
 app.get('/', function (request, response) {
-	// response.send('Hello World!');
 	response.render('home', {
 		title: "Title from Server",
 		content: "This is a sentence sent from the server."
