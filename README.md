@@ -103,3 +103,26 @@ myObj = {
   - an array
   - a boolean
   - null
+
+---
+
+You'll notice that all of the front-end has already been made for you!
+
+#### In `views/library.hbs`:
+
+This file has been created using [Handlebars.js](https://www.npmjs.com/package/handlebars). Handlebars is a logic-less templating engine that **dynamically** generates your HTML page.
+
+Nowadays the majority of the Web consists of dynamic applications in which the data keep changing frequently (e.g. stock prices that fluctuate often).
+
+As a result, there is a continuous need to update the data rendered on the browser. 
+
+This is where JavaScript templating engines come to the rescue and become so useful: 
+
+- They simplify the process of manually updating the **view** (what the user sees) 
+- They improve the structure of the application by allowing developers to separate the business logic from the rest of the code.
+
+To learn more about Handlebars click [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/).
+
+#### In `public`: 
+
+Here you'll find all CSS files used to style the page, including external fonts and image resources.
