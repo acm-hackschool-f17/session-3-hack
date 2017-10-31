@@ -1,4 +1,4 @@
-// Loads the library express which makes creating a server easy in a node application
+// 1) TODO: Load necessary libraries and setup Express server
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -15,12 +15,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Set up where our application will look for client-side files (HTML, CSS, JS)
 app.set('view engine', 'hbs');
 
-// Server listens to port 3000
+// 2) TODO: Start server to listen to port 3000.
 app.listen(3000, function () {
 	console.log('Your app is listening on port 3000!');
 });
 
-// Root web app endpoint
+// 3) TODO: Create a Hello, World root endpoint
+// 5) Follow up TODO: Create Handlebars view and pass data from 
+//					  server to client at root view
 app.get('/', function (request, response) {
 	response.render('home', {
 		title: "Title from Server",
@@ -28,7 +30,7 @@ app.get('/', function (request, response) {
 	});
 });
 
-// Set up another endpoint at /ucla
+// 4) TODO: Set up another endpoint at /error
 app.get('/error', function (request, response) {
 	response.send('The book is invalid.');
 });
@@ -39,6 +41,7 @@ app.get('/library', function (request, response) {
 	});
 });
 
+// 6) TODO: Add book input by the form to our list of books on the server.
 /**
  * Define the route to add a book to the library. We are posted the title, author, isbn,
  * and number of copies.
@@ -61,6 +64,7 @@ app.post('/books/add', function(request, response) {
 	}
 });
 
+// 7) TODO: Delete book specified by the client.
 /**
  * Delete a book by its ISBN. We defined a variable in our route, and express puts its
  * into request.params.isbn, since we named the variable `isbn` in the route path.
