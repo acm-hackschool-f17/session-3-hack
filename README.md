@@ -13,7 +13,7 @@
 
 **Slides:**
 
-- [Session 3 - Node.js](https://docs.google.com/a/g.ucla.edu/presentation/d/1FSnDzv5pqx_z3kASIP1T6GiKT-IQxnfAYim4jhZUer4/edit?usp=sharing)
+- [Session 3 - Node.js](https://docs.google.com/presentation/d/1gZQVm8quus5uuoqkaZKu8ktjhSpQC_Evp2l9YnzwYRw/edit)
 
 **Cheat Sheets:**
 
