@@ -28,7 +28,7 @@
 
 - [Vote here before the end of this session!]\(TBD)
 
-**Attendance Code: NodeIsTheOnlyRealDevLanguage**
+**Attendance Code:** NodeIsTheOnlyRealDevLanguage
 
 ## What we'll be learning today
 
