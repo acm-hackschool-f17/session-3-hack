@@ -60,7 +60,7 @@ Option 2 - Via Git
 
 ```
 $ git clone https://github.com/acm-hackschool-f17/session-3-learn.git
-$ cd session-2-learn/starter
+$ cd session-3-learn/elibrary-starter
 ```
 
 ### Step 2: Familiarize yourself with the starter code
