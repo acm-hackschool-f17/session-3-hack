@@ -26,7 +26,7 @@
 
 **Mentor Voting Form**:
 
-- [Vote here before the end of this session!]\(TBD)
+- [Mentor Voting Form](https://drive.google.com/open?id=1YCc3-E36uX4XmDmeKGrVEGqewMBVdHkZ_OlQ_dU0_QI)
 
 **Attendance Code:** NodeIsTheOnlyRealDevLanguage
 
