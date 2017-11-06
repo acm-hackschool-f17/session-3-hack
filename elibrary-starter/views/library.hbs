@@ -44,14 +44,14 @@
                         <td>Actions</td>
                     </tr>
                 </thead>
-                {{#each books}}
-                    <tr>
-                        <td>{{this.title}}<br /><span>{{this.author}}</span></td>
-                        <td>{{this.isbn}}</td>
-                        <td>{{this.copies}}</td>
-                        <td><a href="/books/delete/{{this.isbn}}"><span class="glyphicon glyphicon-remove-circle"></span></td>
-                    </tr>
-                {{/each}}
+                {{!-- 5) TODO: loop over books and display book title, author, ISBN, and number copies --}}
+                <tr>
+                    <td>Book Title<br /><span>Book Author</span></td>
+                    <td>ISBN</td>
+                    <td>Number Copies</td>
+                    {{!-- 7) TODO: add link to delete book --}}
+                    <td><span class="glyphicon glyphicon-remove-circle"></span></td>
+                </tr>
             </table>
         </div>
 
