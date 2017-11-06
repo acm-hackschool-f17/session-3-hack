@@ -4,7 +4,7 @@
 
 // 3) TODO: Create a Hello, World root endpoint
 
-// 4) TODO: Set up another endpoint at /burrito
+// 4) TODO: Set up another endpoint at /library
 
 // 5) Follow up TODO: Create Handlebars view and pass data from 
 //					  server to client at root view

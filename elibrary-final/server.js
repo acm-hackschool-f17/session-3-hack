@@ -30,15 +30,15 @@ app.get('/', function (request, response) {
 	});
 });
 
-// 4) TODO: Set up another endpoint at /error
-app.get('/error', function (request, response) {
-	response.send('The book is invalid.');
-});
-
+// 4) TODO: Set up another endpoint at /library
 app.get('/library', function (request, response) {
 	response.render('library', {
 		books: books
 	});
+});
+
+app.get('/error', function (request, response) {
+	response.send('The book is invalid.');
 });
 
 // 6) TODO: Add book input by the form to our list of books on the server.
