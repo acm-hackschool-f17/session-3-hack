@@ -1,4 +1,4 @@
-# Hackschool Learn Session 3: Node.js
+# Hackschool Hack Session 3: Node.js
 
 **Location**: Covel 227
 
@@ -32,9 +32,6 @@
 
 ## What we'll be learning today
 
-- Intro to Command Line
-  - Navigating through the directory hierarchy
-  - Creating directories
 - Back-End Web Development
   - What is back-end vs. front-end?
   - What is a client-server relationship?
@@ -46,7 +43,14 @@
 
 ## What we'll be building today: An e-Library
 
-### Step 1: Download starter code
+### Step 1: Fork the Repository
+
+![img](https://lh6.googleusercontent.com/qftHqJjw8ullF4sEGYoMKMnVDTmkB-lTz2lC5GEpnZfIwr6Ex2eD_yi5nn4QREFe-LR47IUpWiZSlTcYv-Uyc_H0odIYaQdKAwGXQKl112XoE7RkN_rho1DbGq7wCWA6H0cwUmSc)
+
+- Look for the "Fork" button on the top-right of the page, and click it.
+- Select your profile.
+
+### Step 2: Download the Starter Code
 
 Option 1 - Via Download
 
@@ -63,7 +67,7 @@ $ git clone https://github.com/acm-hackschool-f17/session-3-learn.git
 $ cd session-3-learn/elibrary-starter
 ```
 
-### Step 2: Familiarize yourself with the starter code
+### Step 3: Familiarize yourself with the starter code
 
 #### In `server.js`:
 
