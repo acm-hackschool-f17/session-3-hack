@@ -45,7 +45,7 @@
 
 ### Step 1: Fork the Repository
 
-![img](https://lh6.googleusercontent.com/qftHqJjw8ullF4sEGYoMKMnVDTmkB-lTz2lC5GEpnZfIwr6Ex2eD_yi5nn4QREFe-LR47IUpWiZSlTcYv-Uyc_H0odIYaQdKAwGXQKl112XoE7RkN_rho1DbGq7wCWA6H0cwUmSc)
+<img src="https://lh6.googleusercontent.com/qftHqJjw8ullF4sEGYoMKMnVDTmkB-lTz2lC5GEpnZfIwr6Ex2eD_yi5nn4QREFe-LR47IUpWiZSlTcYv-Uyc_H0odIYaQdKAwGXQKl112XoE7RkN_rho1DbGq7wCWA6H0cwUmSc" width="400px">
 
 - Look for the "Fork" button on the top-right of the page, and click it.
 - Select your profile.
