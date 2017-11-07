@@ -28,7 +28,7 @@
 
 - [Mentor Voting Form]\(TBD)
 
-**Attendance Code:** NodeIsTheOnlyRealDevLanguage
+**Attendance Code:** #FullStack
 
 ## What we'll be learning today
 
