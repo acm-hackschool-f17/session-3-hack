@@ -18,7 +18,7 @@
 **Cheat Sheets:**
 
 * [Bootstrap/Javascript Review](https://github.com/acm-hackschool-f17/Resources/blob/master/Learn-Session-2-README.md)
-* [Node.js Setup and Review](https://github.com/acm-hackschool-f17/Resources/blob/master/nodejs-README.md)
+* [Node.js and Handlebars.js Setup and Review](https://github.com/acm-hackschool-f17/Resources/blob/master/nodejs-handlebars-README.md)
 
 **Course Overview Table of Contents**:
 
