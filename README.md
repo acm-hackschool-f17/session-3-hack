@@ -68,38 +68,48 @@ This is the file that will eventually become the code for our server. Things mar
 
 The file empty except for a pre-written helper function `initbooks()`. It returns an **array** (as denoted by the square \[] brackets) of information on books. 
 
-##### Extra Reading: JSON
+##### JavaScript Objects (extra reading):
 
-This data is represented using **JSON**, which stands for **J**ava**S**cript **O**bject **N**otation. Each individual object (in this case, a book) is represented as a block surrounded by curly \{} braces.
+In JavaScript, objects are king. If you understand objects, you understand JavaScript.
 
-When exchanging data between a browser and a server, the data can only be text. JSON is text, and we can convert any JavaScript object into JSON, and send JSON to the server.
+Objects can be thought of as variables containing more variables. If you have taken CS 31, think of them as structs/classes.
 
-Inside the curly braces are a **key-value** format that associates a **key** with a certain **value**.
+So far, we have used JavaScript variables to contain single values:
+
+```
+var person = "John Doe";
+
+```
+
+Objects are variables too. But objects can contain many values.
 
 For example:
 
 ```
-myObj = { 
-	"name":"John", 
-	"age":31, 
-	"city":"New York" 
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  favoriteFood: "Pizza"
+  isMale: true,
+  fullName: function() { 
+  	return this.firstName + " " + this.lastName;
+  }
 };
+
 ```
 
-**Keys**
+JavaScript objects are essentially a number of **key-value** pairs inside curly braces {}.
 
-- **must** be strings
-- **must** be written with double quotes ("")
+**Values** can be:
 
-**Values**
-
-- **must** be one of the following data types:
-  - a string
-  - a number
-  - an object (JSON object)
-  - an array
-  - a boolean
-  - null
+- Numbers
+- Strings
+- Bools
+- Arrays
+- undefined
+- Functions
+- Even other objects!
 
 ---
 
